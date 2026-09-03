@@ -75,9 +75,9 @@ The dashboard was created to answer the following business questions:
 
 The dashboard includes the following visualizations:
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 
-![Insights](screenshots/Insights.png)
+![Insights](Screenshots/Insights.png)
   -----------------------------------------------------------------------
   Visualization                       Purpose
   ----------------------------------- -----------------------------------
