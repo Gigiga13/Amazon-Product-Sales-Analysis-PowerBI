@@ -2,471 +2,258 @@
 
 ## 📌 Project Overview
 
-**Amazon Product Sales Analysis** is an interactive **Power BI
-dashboard** developed to analyze Amazon product sales, product
-performance, customer reviews, and sales trends over time.
+**Amazon Product Sales Analysis** is an interactive **Power BI dashboard** developed to analyze Amazon sales performance, product categories, customer reviews, and sales trends over time.
 
-The project uses an Amazon sales dataset containing **89,082 records and
-6 source columns** covering product category, product description,
-price, reviews, shipment information, and order date.
+The project uses an Amazon sales dataset containing **89,082 records and 6 source columns** covering product category, product description, price, reviews, shipment information, and order date.
 
-The dashboard was designed to answer key business questions around:
+The dashboard provides a clear view of overall sales performance and helps identify **top-performing products, high-performing categories, sales trends, and potential business opportunities**.
 
--   Overall Year-to-Date (YTD) and Quarter-to-Date (QTD) sales
-    performance
--   Monthly and weekly sales trends
--   Product-category contribution to revenue
--   Top products by YTD sales
--   Top products by YTD reviews
--   Product sales volume
--   Identifying high-performing and underperforming product categories
-
-------------------------------------------------------------------------
+---
 
 ## 🎯 Business Objective
 
-The main objective of this project is to transform raw Amazon sales data
-into an interactive business intelligence dashboard that helps
-stakeholders:
+The main objective is to transform raw Amazon sales data into an interactive business intelligence dashboard that helps stakeholders:
 
-1.  Monitor overall sales performance.
-2.  Identify important sales trends and seasonal patterns.
-3.  Understand which product categories contribute most to revenue.
-4.  Identify top-performing products.
-5.  Analyze customer engagement through product reviews.
-6.  Identify categories that may require pricing, product-mix, or
-    marketing attention.
-7.  Support data-driven inventory and campaign planning.
+* Monitor **YTD and QTD sales performance**
+* Analyze monthly and weekly sales trends
+* Compare product-category performance
+* Identify top-performing products
+* Analyze customer engagement through reviews
+* Identify high and low-performing categories
+* Support data-driven sales and marketing decisions
 
-------------------------------------------------------------------------
+---
 
 ## ❓ Business Questions
 
-The dashboard was created to answer the following business questions:
+The dashboard answers key questions such as:
 
-### Sales Analysis
+* What are the current **YTD Sales** and **QTD Sales**?
+* How do sales change month by month?
+* Which weeks have the highest sales?
+* Which product categories contribute the most to sales?
+* What are the **Top 5 products by YTD Sales**?
+* What are the **Top 5 products by YTD Reviews**?
+* Which categories are underperforming?
+* How does sales performance change across quarters?
 
--   What are the current **YTD Sales** and **QTD Sales**?
--   How do sales change month by month?
--   Which weeks show the highest and lowest sales?
--   Is there any noticeable seasonal or time-based sales pattern?
+---
 
-### Product Category Analysis
+## 🎯 Problem Statement
 
--   Which product category contributes the most to YTD sales?
--   What percentage of total YTD sales does each category contribute?
--   Which categories are underperforming?
+The objective of the analysis is to convert raw Amazon product sales data into an interactive dashboard that provides insights into **sales performance, product trends, category contribution, and customer engagement**.
 
-### Product Performance
+![Amazon Sales Problem Statement](Screenshots/Amazon_Sales_Problem_Statement.png)
 
--   What are the **Top 5 products by YTD Sales**?
--   What are the **Top 5 products by YTD Reviews**?
--   Do products with high customer reviews also generate high sales?
+---
 
-### Business Performance
+## 📊 Dashboard
 
--   How many products were sold during the year?
--   Which categories should receive more focus?
--   What opportunities exist for improving lower-performing categories?
+The dashboard provides a consolidated view of **sales KPIs, product performance, category analysis, and time-based sales trends**.
 
-------------------------------------------------------------------------
+### Key Dashboard Features
 
-## 📋 Chart Requirements
+* 📈 YTD Sales
+* 📊 QTD Sales
+* 📦 YTD Products Sold
+* ⭐ YTD Reviews
+* 📅 Sales by Month
+* 📅 Sales by Week
+* 🏆 Top 5 Products by YTD Sales
+* ⭐ Top 5 Products by YTD Reviews
+* 📋 Sales by Product Category
+* 🎛️ Product Category & Quarter Filters
 
-The dashboard includes the following visualizations:
+### Main Dashboard
 
-![Dashboard](Screenshots/dashboard.png)
+![Amazon Product Sales Dashboard](Screenshots/dashboard.png)
 
-![Insights](Screenshots/Insights.png)
-  -----------------------------------------------------------------------
-  Visualization                       Purpose
-  ----------------------------------- -----------------------------------
-  **Sales by Month -- Line Chart**    Analyze monthly sales trends and
-                                      identify seasonal patterns
+### Insights Dashboard
 
-  **Sales by Week -- Column Chart**   Identify short-term sales
-                                      fluctuations
+![Amazon Sales Insights](Screenshots/Insights.png)
 
-  **Sales by Product Category --      Compare category-level sales
-  Table/Heat Map**                    performance
+---
 
-  **Top 5 Products by YTD Sales --    Identify major revenue-generating
-  Bar Chart**                         products
-
-  **Top 5 Products by YTD Reviews --  Identify products receiving the
-  Bar Chart**                         highest customer engagement
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-## 📅 What is YTD?
-
-**YTD (Year-to-Date)** represents the cumulative value from the **beginning of the year up to the selected/current date**.
-
-In this project, YTD is used to track cumulative **sales, products sold, and reviews** throughout the year. For example, if the selected date is in September, YTD Sales represents the total sales from January through September.
-
-YTD analysis helps stakeholders understand **overall year performance, measure progress toward targets, compare performance over time, and identify whether the business is on track for the year**.
-
-## 📈 KPI Requirements
+## 📈 KPIs
 
 The dashboard tracks four major KPIs:
 
-### 1. YTD Sales
+| KPI                   | Description                                                        |
+| --------------------- | ------------------------------------------------------------------ |
+| **YTD Sales**         | Total sales from the beginning of the year up to the selected date |
+| **QTD Sales**         | Total sales generated during the current quarter                   |
+| **YTD Products Sold** | Total number of products sold during the year                      |
+| **YTD Reviews**       | Total number of reviews associated with products during the year   |
 
-Measures total sales generated from the beginning of the year up to the
-selected date.
-
-### 2. QTD Sales
-
-Measures sales generated during the current quarter up to the selected
-date.
-
-### 3. YTD Products Sold
-
-Measures the total number of products sold during the year.
-
-### 4. YTD Reviews
-
-Tracks the total number of reviews associated with products during the
-year.
-
-------------------------------------------------------------------------
+---
 
 ## 🗂️ Dataset
 
-### Source File
+**Source:** `Dataset/Amazon_Combined_Data.xlsx`
 
-`Amazon_Combined_Data.xlsx`
+The dataset contains **89,082 rows and 6 columns**:
 
-### Dataset Structure
+| Column                | Description                |
+| --------------------- | -------------------------- |
+| `Product Category`    | Product category           |
+| `Product Description` | Product name/description   |
+| `Price(Dollar)`       | Product price in USD       |
+| `Number of reviews`   | Number of customer reviews |
+| `Shipment`            | Shipment information       |
+| `Order Date`          | Order date                 |
 
-The raw dataset contains the following fields:
+---
 
-  Column                    Description
-  ------------------------- -------------------------------------------
-  **Product Category**      Category to which the product belongs
-  **Product Description**   Detailed product name/description
-  **Price(Dollar)**         Product price in USD
-  **Number of reviews**     Number of customer reviews
-  **Shipment**              Shipment/delivery destination information
-  **Order Date**            Date on which the order was recorded
+## 🧹 Data Preparation & Modeling
 
-### Dataset Size
+The data was prepared and modeled in Power BI before creating the dashboard.
 
--   **Rows:** 89,082
--   **Columns:** 6
--   **Date field:** `Order Date`
--   **Sales-related field:** `Price(Dollar)`
--   **Customer engagement field:** `Number of reviews`
+Key steps included:
 
-------------------------------------------------------------------------
+* Imported the Excel dataset into Power BI
+* Checked and corrected data types
+* Converted `Order Date` into a date field
+* Created a dedicated **Calendar Table**
+* Created Month, Month Number, Quarter, Quarter Number, and Week fields
+* Established the required date relationship
+* Created DAX measures for KPIs
+* Applied formatting to numerical values and dashboard visuals
 
-## 🧹 Data Preparation
+---
 
-Before building the dashboard, the dataset was prepared for analysis in
-Power BI.
+## 🗓️ Calendar & Time Intelligence
 
-Key preparation steps included:
+A dedicated Calendar Table was created using the minimum and maximum order dates.
 
--   Loading the Amazon dataset into Power BI
--   Checking column data types
--   Converting `Order Date` into a proper date field
--   Creating a dedicated **Calendar Table**
--   Establishing a relationship between the Calendar Table and Amazon
-    sales data
--   Creating calculated columns required for time-based analysis
--   Creating DAX measures for KPIs and dashboard visuals
--   Applying appropriate formatting to currency, percentages, and
-    numerical values
+The Calendar Table includes:
 
-------------------------------------------------------------------------
+* Date
+* Month
+* Month Number
+* Quarter
+* Quarter Number
+* Week
 
-## 🗓️ Calendar Table
+Time-intelligence calculations were used for:
 
-A dedicated Calendar Table was created to support time-intelligence
-analysis.
+* **YTD Sales**
+* **QTD Sales**
+* **YTD Products Sold**
+* **YTD Reviews**
 
-The Calendar Table contains fields such as:
+---
 
--   Date
--   Month
--   Month Number
--   Quarter
--   Quarter Number
--   Week
+## 🧮 DAX
 
-The Calendar Table enables calculations such as:
+DAX was used to create calculated columns and measures for the dashboard.
 
--   YTD
--   QTD
--   Monthly analysis
--   Weekly analysis
--   Quarter-based filtering
+Key functions used include:
 
-------------------------------------------------------------------------
+`CALENDAR()` | `FORMAT()` | `MONTH()` | `QUARTER()` | `CONCATENATE()` | `WEEKNUM()` | `SUM()` | `COUNT()` | `TOTALYTD()` | `TOTALQTD()`
 
-## 🧮 DAX & Calculated Columns
+The complete DAX calculations are available in:
 
-DAX was extensively used to create business calculations and support
-interactive dashboard analysis.
+`DAX/DAX_Measures.txt`
 
-### Key DAX Concepts / Functions Used
-
-The project demonstrates the use of functions/concepts including:
-
--   `CALCULATE()`
--   `SUM()`
--   `COUNT()`
--   `DISTINCTCOUNT()`
--   `DIVIDE()`
--   `TOTALYTD()`
--   `TOTALQTD()`
--   `FILTER()`
--   `TOPN()`
--   `ALL()`
--   `MAX()`
--   `VALUES()`
--   `IF()`
--   Date/time intelligence
--   Calculated columns
--   Measures
--   Filter context
-
-> **Note:** The exact DAX expressions in the `.pbix` file are the source
-> of truth for the calculations. The examples below illustrate the type
-> of calculations implemented in the project.
-
-### Example: Sales Measure
-
-``` dax
-Total Sales =
-SUMX(
-    'Amazon_Data',
-    'Amazon_Data'[Price(Dollar)]
-)
-```
-
-### Example: YTD Sales
-
-``` dax
-YTD Sales =
-TOTALYTD(
-    [Total Sales],
-    'Calendar Table'[Date]
-)
-```
-
-### Example: QTD Sales
-
-``` dax
-QTD Sales =
-TOTALQTD(
-    [Total Sales],
-    'Calendar Table'[Date]
-)
-```
-
-### Example: YTD Reviews
-
-``` dax
-YTD Reviews =
-TOTALYTD(
-    SUM('Amazon_Data'[Number of reviews]),
-    'Calendar Table'[Date]
-)
-```
-
-### Example: % YTD Sales
-
-``` dax
-% YTD Sales =
-DIVIDE(
-    [YTD Sales],
-    CALCULATE(
-        [YTD Sales],
-        ALL('Amazon_Data'[Product Category])
-    )
-)
-```
-
-### Example: Top 5 Products
-
-A `TOPN()`-based calculation/filtering approach was used to identify the
-products contributing the highest YTD sales and the products receiving
-the highest number of reviews.
-
-------------------------------------------------------------------------
+---
 
 ## 🎛️ Dashboard Interactivity
 
-The dashboard includes interactive filters/slicers for:
+The dashboard includes interactive slicers for:
 
--   **Product Category**
--   **Quarter**
+* **Product Category**
+* **Quarter**
 
-Users can select different categories or quarters to dynamically update
-the dashboard visuals and KPIs.
+Selecting different values dynamically updates the dashboard KPIs and visualizations.
 
-------------------------------------------------------------------------
+---
 
-## 📊 Dashboard Pages
+## 🔍 Key Insights
 
-### 1. Amazon Product Sales Analysis
+The analysis highlights several important findings:
 
-The main dashboard provides:
+* 🏆 **Men Shoes** is the top category, contributing **43.18% of YTD Sales**.
+* 📈 **December** records the highest sales, with strong growth from **September onwards**.
+* 💰 **Men Shoes and Camera** together contribute approximately **66% of YTD Sales**.
+* ⭐ **SanDisk** has three products among the Top 5 products by YTD Reviews.
+* ⚠️ **Mobile & Accessories** contributes only **1.80% of YTD Sales**, indicating an area for further investigation.
+* 📦 Approximately **27.75K products** were sold.
 
--   YTD Sales
--   QTD Sales
--   YTD Products Sold
--   YTD Reviews
--   Sales by Month
--   Sales by Week
--   Sales by Product Category
--   Top 5 Products by YTD Sales
--   Top 5 Products by YTD Reviews
--   Product Category and Quarter filters
+---
 
-### 2. Amazon Sales Analysis Insights
+## 💡 Business Takeaways
 
-The insights page summarizes the major findings from the dashboard.
+Based on the analysis:
 
-#### 🏆 Top Category
+* Focus on **Men Shoes and Camera** to maintain strong revenue contribution.
+* Plan inventory and marketing activities ahead of the **September–December sales period**.
+* Investigate **Mobile & Accessories** to understand its low sales contribution.
+* Compare product reviews with sales to identify products with strong customer interest.
+* Use monthly and weekly trends to support inventory and campaign planning.
 
-**Men Shoes -- 43.18%**
-
-Men Shoes is the highest contributor to YTD sales.
-
-#### 📈 Sales Trend
-
-**December** records the peak sales, with strong growth observed from
-**September onwards**.
-
-#### 💰 Revenue Concentration
-
-**Men Shoes + Camera contribute approximately 66% of YTD Sales**,
-indicating a high concentration of revenue in these two categories.
-
-#### ⭐ Review Leader
-
-**SanDisk** products dominate the Top 5 products by YTD reviews, with
-three products appearing among the leading reviewed products.
-
-#### ⚠️ Opportunity
-
-**Mobile & Accessories -- 1.80%**
-
-This category has a relatively low contribution to YTD sales and may
-require further investigation into pricing, product mix, inventory, or
-marketing strategy.
-
-#### 📦 Products Sold
-
-Approximately **27.75K products** were sold, indicating strong overall
-product movement.
-
-------------------------------------------------------------------------
-
-## 💡 Key Business Takeaways
-
-Based on the dashboard analysis:
-
--   **Prioritize Men Shoes and Camera** to sustain revenue growth.
--   Prepare inventory and marketing campaigns ahead of the
-    **September--December sales peak**.
--   Investigate **Mobile & Accessories** for pricing and product-mix
-    opportunities.
--   Compare highly reviewed products with their sales performance to
-    identify products with strong customer interest but potentially
-    lower revenue.
--   Monitor revenue concentration to reduce dependency on a small number
-    of categories.
--   Use monthly and weekly sales trends to improve inventory and
-    campaign planning.
-
-------------------------------------------------------------------------
+---
 
 ## 🛠️ Tools & Technologies
 
--   **Power BI**
--   **DAX**
--   **Power Query**
--   **Microsoft Excel**
--   Data Modeling
--   Time Intelligence
--   Interactive Dashboard Design
+* **Power BI**
+* **DAX**
+* **Power Query**
+* **Microsoft Excel**
+* Data Modeling
+* Time Intelligence
+* Data Visualization
+* Business Intelligence
 
-------------------------------------------------------------------------
+---
 
-## 📁 Recommended GitHub Repository Structure
+## 📁 Repository Structure
 
-``` text
-Amazon-Product-Sales-Analysis/
+```text
+Amazon-Product-Sales-Analysis-PowerBI/
 │
-├── README.md
+├── DAX/
+│   └── DAX_Measures.txt
 │
 ├── Dataset/
 │   └── Amazon_Combined_Data.xlsx
 │
 ├── PowerBI/
-│   └── Amazon_Product_Sales_Analysis.pbix
+│   └── Amazon Product Sales Analysis.pbix
 │
 ├── Screenshots/
-│   ├── dashboard.png
-│   ├── insights.png
-│   ├── problem-statement.png
+│   ├── Amazon_Sales_Problem_Statement.png
+│   ├── Insights.png
+│   └── dashboard.png
 │
-└── DAX/
-    └── DAX_Measures.txt
+└── README.md
 ```
 
-------------------------------------------------------------------------
+---
 
-## 🚀 How to Use the Project
+## 🚀 How to Use
 
-1.  Clone or download this repository.
-2.  Open the `.pbix` file using **Microsoft Power BI Desktop**.
-3.  If required, update the dataset/source path.
-4.  Refresh the data.
-5.  Use the Product Category and Quarter slicers to explore the
-    dashboard.
-6.  Navigate between the dashboard and insights pages to understand the
-    analysis.
+1. Clone or download this repository.
+2. Open `PowerBI/Amazon Product Sales Analysis.pbix` in **Power BI Desktop**.
+3. If required, update the dataset path to `Dataset/Amazon_Combined_Data.xlsx`.
+4. Refresh the data.
+5. Use the **Product Category** and **Quarter** filters to explore the dashboard.
+6. Review the dashboard and insights page for business findings.
 
-------------------------------------------------------------------------
-
-## 📌 Project Highlights
-
-This project demonstrates practical Power BI skills including:
-
--   Data import and transformation
--   Data modeling
--   Calendar table creation
--   DAX measures
--   Calculated columns
--   Time-intelligence functions
--   KPI development
--   Top-N analysis
--   Interactive slicers
--   Business-focused dashboard design
--   Data storytelling and insight generation
-
-------------------------------------------------------------------------
+---
 
 ## 🎯 Skills Demonstrated
 
-**Power BI \| DAX \| Power Query \| Data Cleaning \| Data Modeling \|
-Time Intelligence \| KPI Analysis \| Data Visualization \| Business
-Analysis \| Dashboard Development**
+**Power BI | DAX | Power Query | Data Cleaning | Data Modeling | Time Intelligence | KPI Development | Data Visualization | Business Analysis | Dashboard Development**
 
-------------------------------------------------------------------------
+---
 
 ## 👩‍💻 Author
 
 **Girija Girish Gade**
 
-Data Analyst \| SQL \| Python \| Power BI \| Excel
+Data Analyst | SQL | Python | Power BI | Excel
 
-------------------------------------------------------------------------
+---
 
 ## ⭐ If you found this project useful
 
