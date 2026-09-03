@@ -414,7 +414,6 @@ Amazon-Product-Sales-Analysis/
 │   ├── dashboard.png
 │   ├── insights.png
 │   ├── problem-statement.png
-│   └── kpi-requirements.png
 │
 └── DAX/
     └── DAX_Measures.txt
