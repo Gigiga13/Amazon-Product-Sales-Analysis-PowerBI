@@ -232,12 +232,7 @@ Amazon-Product-Sales-Analysis-PowerBI/
 
 ## 🚀 How to Use
 
-1. Clone or download this repository.
-2. Open `PowerBI/Amazon Product Sales Analysis.pbix` in **Power BI Desktop**.
-3. If required, update the dataset path to `Dataset/Amazon_Combined_Data.xlsx`.
-4. Refresh the data.
-5. Use the **Product Category** and **Quarter** filters to explore the dashboard.
-6. Review the dashboard and insights page for business findings.
+Open `PowerBI/Amazon Product Sales Analysis.pbix` in **Power BI Desktop** and refresh the dataset if required. Use the **Product Category** and **Quarter** filters to explore the dashboard.
 
 ---
 
