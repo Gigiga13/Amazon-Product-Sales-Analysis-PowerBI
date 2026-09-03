@@ -1,0 +1,135 @@
+========================================
+AMAZON PRODUCT SALES ANALYSIS - DAX
+===================================
+
+1. CALENDAR TABLE
+
+---
+
+Calendar Table =
+CALENDAR(
+MIN(Amazon_Data[Order Date]),
+MAX(Amazon_Data[Order Date])
+)
+
+2. CALENDAR TABLE COLUMNS
+
+---
+
+Month =
+FORMAT(
+'Calendar Table'[Date],
+"MMM"
+)
+
+Month Number =
+MONTH(
+'Calendar Table'[Date]
+)
+
+Quater Number =
+QUARTER(
+'Calendar Table'[Date]
+)
+
+Quater =
+CONCATENATE(
+"Qtr ",
+'Calendar Table'[Quater Number]
+)
+
+Week =
+WEEKNUM(
+'Calendar Table'[Date]
+)
+
+3. YEAR-TO-DATE (YTD) MEASURES
+
+---
+
+YTD Sales =
+TOTALYTD(
+SUM(Amazon_Data[Price(Dollar)]),
+'Calendar Table'[Date]
+)
+
+YTD Product Sold =
+TOTALYTD(
+COUNT(Amazon_Data[Product Category]),
+'Calendar Table'[Date]
+)
+
+YTD Reviews =
+TOTALYTD(
+SUM(Amazon_Data[Number of reviews]),
+'Calendar Table'[Date]
+)
+
+4. QUARTER-TO-DATE (QTD) MEASURE
+
+---
+
+QTD Sales =
+TOTALQTD(
+SUM(Amazon_Data[Price(Dollar)]),
+'Calendar Table'[Date]
+)
+
+5. TOTAL SALES / PRICE
+
+---
+
+Total Sales =
+SUM(
+Amazon_Data[Price(Dollar)]
+)
+
+6. TOTAL REVIEWS
+
+---
+
+Total Reviews =
+SUM(
+Amazon_Data[Number of reviews]
+)
+
+7. TOTAL PRODUCTS SOLD
+
+---
+
+Total Product Sold =
+COUNT(
+Amazon_Data[Product Category]
+)
+
+8. TOP 5 PRODUCTS BY YTD SALES
+
+---
+
+Top 5 Products by YTD Sales are filtered using Power BI's built-in Top N filter.
+
+Filter:
+Product Name → Top N → Top 5 → By value: YTD Sales
+
+9. TOP 5 PRODUCTS BY YTD REVIEWS
+
+---
+
+Top 5 Products by YTD Reviews are filtered using Power BI's built-in Top N filter.
+
+Filter:
+Product Name → Top N → Top 5 → By value: YTD Reviews
+
+========================================
+POWER BI FILTERS USED
+=====================
+
+Top 5 Products by YTD Sales:
+Product Name → Top N → Top 5 → YTD Sales
+
+Top 5 Products by YTD Reviews:
+Product Name → Top N → Top 5 → YTD Reviews
+
+========================================
+END OF DAX MEASURES
+===================
